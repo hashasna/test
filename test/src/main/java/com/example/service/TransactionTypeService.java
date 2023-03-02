@@ -1,7 +1,6 @@
 package com.example.service;
 
 import com.example.model.TransactionType;
-import com.example.repository.TransactionTypeRepository;
 import com.example.repository.TransactionTypeServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

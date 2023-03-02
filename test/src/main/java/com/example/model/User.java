@@ -9,8 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 
-    private Integer userId;
+    private String userId;
     private String username;
     private String passwordHash;
     private String accountNumber;
+
+    public User(String transactiontypeid, String transactioncode, String transactionname) {
+    }
 }

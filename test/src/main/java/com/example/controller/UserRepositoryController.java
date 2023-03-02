@@ -10,7 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.lang.Nullable;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -62,7 +61,7 @@ public class UserRepositoryController implements UserRepository {
     }
 
     private RowMapper<User> userRowMapper = ((rs, rowNum) -> {
-        return new User(rs.getInt("USERID"),
+        return new User(rs.getString("USERID"),
                 rs.getString("USERNAME"),
                 rs.getString("PASSWORDHASH"),
                 rs.getString("ACCOUNTNUMBER"));

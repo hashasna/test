@@ -17,12 +17,12 @@ public class UserServiceController implements UserServiceRepository {
 
     @Override
     public User validateUser(String username, String password) throws EtAuthException {
-
-        return null;
+        return userRepository.findByUsernameAndPassword(username, password);
     }
 
     @Override
     public User registerUser(String username, String passwordHash, String accountNumber) {
-        return null;
+        String userId = userRepository.createdUser(username, passwordHash, accountNumber);
+        return userRepository.findById(userId);
     }
 }

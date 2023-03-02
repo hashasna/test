@@ -12,4 +12,5 @@ public class TransactionType {
     private String transactionTypeId;
     private String transactionCode;
     private String transactionName;
+    private String userId;
 }

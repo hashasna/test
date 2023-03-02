@@ -8,4 +8,6 @@ public interface UserRepository {
 
     User findById(String userId);
 
+    String createdUser(String username, String passwordHash, String accountNumber);
+
 }
